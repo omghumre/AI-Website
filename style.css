@@ -8,8 +8,48 @@
     padding: 0 10px;
   }
 }
+
+
 /* styles.css */
-body {
-  padding-top: 50px; /* Adjust as needed */
+/* styles.css */
+.owl-carousel .item {
+  height: 250px; /* Adjust the max-height as needed */
+}
+.owl-carousel .item img {
+  max-height: 150px; /* Adjust the max-height as needed */
+}
+
+/* styles.css cards*/
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+   /* Adjust margin to avoid horizontal scrollbar */
+  width: 100%;
+}
+.col {
+  /* padding: 0 15px; Adjust padding to maintain spacing */
+  /* flex: 1 0 auto; Allow cards to grow to fill available space */
+  flex: 0 0 calc(100% / 3); /* Each card takes up one-third of the available width */
+  padding: 0 15px; /* Adjust padding to maintain spacing */
+  
+}
+.card {
+  max-width: 100%; /* Ensure cards take up full height of parent container */
+  max-width: 100%;
+}
+
+/* styles.css */
+.layout-row {
+  margin-bottom: 0; /* Remove default margin */
+}
+
+.layout-img {
+  padding-right: 0px; /* Adjust padding to maintain spacing */
+}
+
+.layout-text {
+  padding-left: 0px; /* Adjust padding to maintain spacing */
 }
 
