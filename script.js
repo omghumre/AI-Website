@@ -79,3 +79,38 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize Materialize components
   M.AutoInit();
 });
+
+
+// script.js
+$(document).ready(function(){
+  $('#contact-form').submit(function(e){
+    e.preventDefault(); // Prevent default form submission
+    // Fetch form data
+    var formData = {
+      name: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
+
+    // Here you can perform additional validation if needed
+
+    // Send form data to server (example using AJAX)
+    $.ajax({
+      url: 'process_form.php', // Replace 'process_form.php' with your backend endpoint
+      method: 'POST',
+      data: formData,
+      success: function(response){
+        // Handle success response
+        console.log('Form submitted successfully:', response);
+        alert('Thank you for your message!');
+        // Optionally, clear form fields
+        $('#contact-form')[0].reset();
+      },
+      error: function(xhr, status, error){
+        // Handle error response
+        console.error('Form submission error:', error);
+        alert('An error occurred. Please try again later.');
+      }
+    });
+  });
+});
